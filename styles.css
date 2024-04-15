@@ -1,0 +1,362 @@
+*,*::before,*::after{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body,html{
+	min-height: 100%;
+	font-family: sans-serif;
+}
+html{
+font-size: calc(1em + 1vw);
+}
+body{
+	background :#eee;
+}
+#splash{
+position :fixed;
+top:0%;
+left:0%;
+height:100%;
+width:100%;
+background :#222;
+display :flex;
+justify-content :center;
+align-items:center;
+color:#ddd;
+}
+button,input{
+font-size: inherit;
+}
+header{
+	background:rgba(0,0,0,.4);
+	height :65px;
+	padding: .2em 1.2rem;
+	display : grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows:1fr 1fr;
+	width:100%;
+	position: fixed ;
+	top:0;
+	color:#ccc;
+	z-index:100;
+	align-content :center;
+	transition:all ease-in-out .2s;
+}
+header h1{
+	grid-column:1/-1;
+	text-align:center;
+	font-size:1.2rem;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+}
+header ul{
+	grid-column: 1/-1;
+	grid-row:2/3;
+	display : flex;
+	align-items: center;
+	justify-content:center;
+}
+header ul li{
+	font-size:.8rem;
+	margin : 0 3vmin;
+}
+header img{
+width:20px;
+position: absolute ;
+right:1.2em;
+top:1.2em;
+}
+.contact{
+background-color:yellow;
+padding:.1rem .4rem;
+border-radius:2rem;
+color:#333;
+}
+section{
+	padding : 0 1.2em;
+	line-height: 1.75;
+	color:#555;
+	padding-top:70px;
+}
+
+main #home::before {
+position: absolute ;
+top:0;
+content: '';
+height : 110vh;
+width :100%;
+background : url('https://ik.imagekit.io/cosmascodes/portfolio/slider3_0fE-vHNgwX2.jpg');
+clip-path: polygon(0% 0%,100% 0%,100% 100%,0% 85%);
+background-size: cover;
+background-position : left;
+z-index:-1;
+}
+main #home{
+position: relative;
+height :80vh;
+display :flex;
+justify-content :center;
+align-items:center;
+flex-direction :column;
+text-align :center;
+color: #ddd;
+}
+main #home h2{
+	line-height: 1.75;
+}
+main #home .txt{
+	border-right:1.5px solid yellow;
+	color:yellow;
+}
+main #home button{
+	margin-top: 2vmin;  
+	padding : 1.2vmin 1.2rem;
+	border-radius:2rem;
+	outline :none;
+	background :blueviolet;
+	border :transparent;
+	color: white;
+}
+main #about{
+position :relative;
+display:flex;
+flex-direction:column;
+}
+main #about article{
+flex:.6;
+text-align: center;
+}
+main #about article button, main #portfolio button{
+border: transparent ;
+outline :none;
+background :#ddd;
+border-radius:2em;
+padding:.4rem .8rem;
+color:blueviolet;
+}
+main #about div{
+display :flex;
+justify-content:center;
+align-items:center;
+flex:.4;
+}
+main #about div img{
+width:50%;
+}
+main #portfolio{
+height : auto;
+}
+main #portfolio .skillshare{
+text-align: center;
+}
+main #portfolio .skillshare .skills-card{
+background:#fff;
+border-radius:5px;
+padding:1.2rem;
+margin:10px 0;
+}
+main #portfolio .skillshare .skills-card img{
+width:40px;
+height:auto;
+display: block ;
+margin:0 auto;
+}
+main #portfolio .skillshare .skills-card span{
+color:blueviolet;
+font-weight:700;
+position: relative ;
+}
+main #portfolio .skillshare .skills-card span::before{
+position: absolute;
+content:'';
+width:40%;
+height:3px;
+background:#ddd;
+bottom :-6px;
+left:30%;
+border-radius:2em;
+}
+main #portfolio .work-header{
+display :flex;
+flex-direction :row;
+justify-content :space-between;
+}
+main #portfolio .work-header p{
+color:blueviolet;
+}
+main #portfolio .work{
+height:50vmin;
+display :flex;
+flex-wrap:nowrap;
+overflow-x:auto;
+-webkit-overflow-scrolling:touch;
+margin:1.2em 0;
+}
+main #portfolio .work::-webkit-scrollbar{
+display:none;
+}
+main #portfolio .work .card{
+flex:0 0 auto;
+margin-right:8px;
+width :50vmin;
+border-radius:10px;
+height :100%;
+background :linear-gradient(145deg,#233,#333);
+}
+main #portfolio .work .studemy{
+background:#fff;
+background :linear-gradient(145deg,rgba(0,0,0,.5),rgba(0,0,0,.5)),url("https://ik.imagekit.io/cosmascodes/portfolio/studemy_RML8Iho9SC.png");
+background-position :top;
+background-size:cover;
+background-repeat:no-repeat;
+}
+main #portfolio .work .bolshoi{
+background :linear-gradient(145deg,rgba(0,0,0,.5),rgba(0,0,0,.5)),url("https://ik.imagekit.io/cosmascodes/portfolio/bolshoi_VM8Ox5f_0x.png");
+background-position :center;
+background-size:contain;
+background-repeat:no-repeat;
+}
+main #portfolio .work .calc{
+background:#fff;
+background :linear-gradient(145deg,rgba(0,0,0,.5),rgba(0,0,0,.5)),url("https://ik.imagekit.io/cosmascodes/portfolio/calc_7ysOlahlC.png");
+background-position :center;
+background-size:cover;
+background-repeat:no-repeat;
+}
+
+#section-template{
+width:50px;
+height :auto;
+}
+main #contact{
+	text-align: center;
+}
+main #contact .contact-area{
+display :flex;
+flex-direction:column-reverse ;
+margin-bottom :1.2em;
+}
+main #contact .contact-area div{
+flex:1;
+text-align:center;
+}
+main #contact .contact-area div p{
+display: inline-block;
+margin:2px;
+}
+main #contact .contact-area div p img{
+width:20px;
+height:auto;
+}
+main #contact .contact-area div span{
+display:block;
+}
+main #contact .contact-area form{
+flex:1.5;
+}
+input{
+width :100%;
+padding:8px 4px;
+margin:5px 0;
+border:1px solid blueviolet;
+border-radius:5px;
+outline :none;
+color:blueviolet;
+}
+input[type="submit"]{
+width:45%;
+background-color:blueviolet;
+color:white;
+}
+::placeholder{
+color:blueviolet;
+}
+
+#footer{
+padding :1rem 1.2em;
+border-top:1.5px solid #ddd;
+text-align: center;
+}
+@media screen and (min-width:48em){
+	p,li,input,button{
+		font-size: .7rem;
+	}
+header{
+	grid-template-rows:1fr;
+}
+header h1{
+	grid-column:1/2;
+	text-align: left;
+	font-size:1em;
+	justify-content:flex-start;
+}
+header ul{
+	grid-column: 2/3;
+	grid-row:1/-1;
+}
+header ul li{
+	font-size:.8rem;
+}
+main #about{
+flex-direction:row-reverse;
+padding:60px 5em 2em 5em;
+}
+main #about article{
+padding-top:3em;
+padding-left:3em;
+}
+main #about article span{
+background :#333;
+text-align:right;
+}
+main #about div img{
+width:100%;
+}
+main #portfolio .skillshare .skills-card{
+display: inline-block;
+min-width:50vmin;
+margin: 10px;
+}
+main #portfolio .skillshare p{
+width:60%;
+margin :0 auto;
+}
+main #contact .contact-area{
+flex-direction :row;
+padding:2em;
+background:url('https://ik.imagekit.io/cosmascodes/portfolio/slide_3_91NvKyp91.jpg');
+background-size:cover;
+background-position:center;
+}
+main #contact .contact-area #follow{
+text-align:left;
+}
+main #contact .contact-area div span{
+font-weight: bolder;
+}
+main #contact .contact-area div p{
+display: block;
+color:#eee;
+}
+main #contact .contact-area #follow span{
+color:yellow;
+}
+main #contact .contact-area form div{
+display: flex;
+flex-direction: row-reverse;
+} 
+input{
+background :transparent;
+color:#fff;
+}
+::placeholder{
+color:#fff;
+}
+main #contact .contact-area form div p{
+margin:0 .8em;
+color:#fff;
+}
+}
