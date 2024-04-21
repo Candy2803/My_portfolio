@@ -1,12 +1,9 @@
 document.onreadystatechange=()=>{
-let about =`
-Hey there, my name is Candy. My nickname is Jessie. I am 21 years old.
- I love making friends, coding, browsing, and dancing.
-  On most of my free weekends, I go swimming, hiking or visit friends. When it comes 
-  to food, My favourite dish is Chapo and Chicken. PS: I am
-   a Kalenjin Girl, Ofcourse I love milk.
-`
-
+let about =
+`Hello there, my name is Candy, Jessie is my nickname. I am 21 years old.
+I love making friends, coding, browsing, and dancing.
+I go swimming, hiking or visit friends during my free time.
+My favourite dish is Chapati and Chicken.`
 document.querySelector("#about-text").textContent=about.slice(0,154)+"..."
 
 document.querySelector(".read").addEventListener('click',()=>{
@@ -23,10 +20,6 @@ document.querySelector("#body").style.visibility="visible"
 document.querySelector("#splash").style.visibility="hidden"
 }
 }
-
-
-
-
 
 let links=document.querySelector('.links')
 links.addEventListener('click',e=>{
