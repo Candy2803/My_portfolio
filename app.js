@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", function(){
 	const aboutText = document.getElementById('about-text');
 	const readButton = document.getElementById('read');
 
-	const originalText = aboutText.textContent.trim();
+	const originalText = aboutText.textContent.slice();
 	const maxLength = originalText.indexOf('visit');
 
-	let truncatedText = maxLength !== -1 ? originalText.substring(0, maxLength) + '...' : originalText;
+	let truncatedText = maxLength !== -1 ? originalText.substring(0, maxLength) + '...': originalText;
 	let isCollapsed = true;
 
 	aboutText.textContent = truncatedText;
@@ -46,13 +46,5 @@ portfolio.addEventListener('click',()=>{
 })
 
 
-window.onscroll= ()=>{
-if(document.body.scrollTop>50||document.documentElement.scrollTop>50){
-document.getElementById("header").style.height="60px"
-document.getElementById("header").style.background="#222"
-}else{
-document.getElementById("header").style.height="65px"
-document.getElementById("header").style.background="rgba(0,0,0,.4)"
-}
-}
+
 
