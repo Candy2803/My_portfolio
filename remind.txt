@@ -1,0 +1,16 @@
+variables -> storing data for later retrieval
+eg: var, let, const
+          -> naming variables -> snake_case
+                              -> camelCase
+Data types -> strings -> when it is enclosedin a single quote or double quote
+                      ->var person = "Nick"
+           ->numbers
+           -> null ->
+           ->undefined             
+
+    -> accessing values -> key.value
+comparison operators -> greater than (>)
+                     -> less than (<)
+                     -> equal to (==)
+                     -> strictly equal to (===)
+                     -> not equal to (!=)
