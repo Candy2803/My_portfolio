@@ -44,7 +44,12 @@ portfolio.addEventListener('click',()=>{
 	let elem=document.getElementById("portfolio")
 	elem.scrollIntoView({behavior:"smooth"})
 })
-
+function myBtn(){
+	prompt("Enter Name"),
+	prompt("Enter Email"),
+	prompt("Message"),
+	alert("Thank you for your response")
+}
 
 
 
