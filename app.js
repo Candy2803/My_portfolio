@@ -45,10 +45,14 @@ portfolio.addEventListener('click',()=>{
 	elem.scrollIntoView({behavior:"smooth"})
 })
 function myBtn(){
-	prompt("Enter Name"),
-	prompt("Enter Email"),
-	prompt("Message"),
-	alert("Thank you for your response")
+		let text;
+		let person = prompt("Please enter your name:", "");
+		if (person == null || person == "") {
+		  alert("User cancelled the prompt.");
+		} else {
+		  alert("Hello " + person + "! Contact me via: \n call/whatsapp : 0727862079 or \n E-mail : jacintamzungu@gmail.com");
+		}
+		document.getElementById("alert").innerHTML = text;
 }
 
 
