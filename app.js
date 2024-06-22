@@ -47,12 +47,12 @@ portfolio.addEventListener('click',()=>{
 function myBtn(){
 		let text;
 		let person = prompt("Please enter your name:", "");
-		if (person == null || person == "") {
+		if (person == null || person == text) {
 		  alert("User cancelled the prompt.");
 		} else {
 		  alert("Hello " + person + "! Contact me via: \n call/whatsapp : 0727862079 or \n E-mail : jacintamzungu@gmail.com");
 		}
-		document.getElementById("alert").innerHTML = text;
+		
 }
 
 
