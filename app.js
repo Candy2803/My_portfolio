@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	const readButton = document.getElementById('read');
 
 	const originalText = aboutText.textContent.slice();
-	const maxLength = originalText.indexOf('visit');
+	const maxLength = originalText.indexOf('creativity');
 
 	let truncatedText = maxLength !== -1 ? originalText.substring(0, maxLength) + '...': originalText;
 	let isCollapsed = true;
