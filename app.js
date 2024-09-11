@@ -50,7 +50,7 @@ function myBtn(){
 		if (person == null || person == text) {
 		  alert("User cancelled the prompt.");
 		} else {
-		  alert("Hello " + person + "! Contact me via: \n call/whatsapp : 0727862079 or \n E-mail : jacintamzungu@gmail.com");
+		  alert("Hello " + person + "! Contact me via: \n call/whatsapp : 0727862079 or \n E-mail : candyjessie2@gmail.com");
 		}
 		
 }
