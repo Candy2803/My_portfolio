@@ -12,7 +12,7 @@ html{
 font-size: calc(1em + 1vw);
 }
 body{
-	background :#eee;
+	background :#000;
 }
 #splash{
 position :fixed;
@@ -29,8 +29,13 @@ color:#ddd;
 button,input{
 font-size: inherit;
 }
+h2{
+	color: violet;
+}
+.name{
+	color: #fff;
+}
 header{
-	background:rgba(0,0,0,.4);
 	height :65px;
 	padding: .2em 1.2rem;
 	display : grid;
@@ -39,10 +44,14 @@ header{
 	width:100%;
 	position: fixed ;
 	top:0;
-	color:#ccc;
+	color:#fff;
 	z-index:100;
 	align-content :center;
 	transition:all ease-in-out .2s;
+	margin-top: 20px;
+}
+header h1:hover{
+	color: pink;
 }
 header h1{
 	grid-column:1/-1;
@@ -51,6 +60,8 @@ header h1{
 	display: flex;
 	align-items:center;
 	justify-content:center;
+	transition: 0.5s;
+	cursor: pointer;
 }
 header ul{
 	grid-column: 1/-1;
@@ -58,11 +69,17 @@ header ul{
 	display : flex;
 	align-items: center;
 	justify-content:center;
+	background-color: #333;
+	border-radius: 40px;
 }
 header ul li{
 	font-size:.8rem;
 	margin : 0 3vmin;
-	cursor: pointer
+	cursor: pointer;
+	transition: 0.5s;
+}
+header ul li:hover{
+	color: pink;
 }
 header img{
 width:20px;
@@ -70,31 +87,29 @@ position: absolute ;
 right:1.2em;
 top:1.2em;
 }
-.contact{
-background-color:yellow;
-padding:.1rem .4rem;
-border-radius:2rem;
-color:#333;
-}
+
 section{
 	padding : 0 1.2em;
 	line-height: 1.75;
-	color:#555;
+	color:#fff;
 	padding-top:70px;
 }
 
 main #home::before {
-position: absolute ;
-top:0;
-content: '';
-height : 110vh;
-width :100%;
-background : url('https://ik.imagekit.io/candyjess/portfolio/slider3.jpg?updatedAt=1713505939574');
-clip-path: polygon(0% 0%,100% 0%,100% 100%,0% 85%);
-background-size: cover;
-background-position : left;
-z-index:-1;
+    position: absolute;
+    top: 0;
+    content: '';
+    height: 110vh;
+    width: 100%;
+    
+    /* Gradient overlay to fade the image at the bottom */
+    background: linear-gradient(to bottom, rgba(36, 5, 36, 0) 50%, rgb(67, 4, 74) 100%);    
+    background-size: cover;
+    background-position: left;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 85%);
+    z-index: -1;
 }
+
 main #home{
 position: relative;
 height :80vh;
@@ -103,14 +118,14 @@ justify-content :center;
 align-items:center;
 flex-direction :column;
 text-align :center;
-color: #ddd;
+color: #fff;
 }
 main #home h2{
 	line-height: 1.75;
 }
 main #home .txt{
-	border-right:1.5px solid yellow;
-	color:yellow;
+	border-right:1.5px solid purple;
+	color:violet;
 }
 main #home button{
 	margin-top: 2vmin;  
@@ -121,6 +136,7 @@ main #home button{
 	border :transparent;
 	color: white;
 }
+
 main #about{
 position :relative;
 display:flex;
@@ -154,6 +170,18 @@ width:50%;
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
 }
+#about-text {
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    max-height: 200px; 
+    padding: 0; 
+}
+
+#about-text.expanded {
+    max-height: 1000px; 
+    padding: 10px; 
+}
+
 main #portfolio{
 height : auto;
 }
@@ -161,11 +189,13 @@ main #portfolio .skillshare{
 text-align: center;
 }
 main #portfolio .skillshare .skills-card{
-background:#fff;
+background:#000;
 border-radius:5px;
 padding:1.2rem;
 margin:10px 0;
 }
+
+
 main #portfolio .skillshare .skills-card img{
 width:40px;
 height:auto;
@@ -187,6 +217,110 @@ bottom :-6px;
 left:30%;
 border-radius:2em;
 }
+
+@keyframes glow-border {
+	0% {
+	  border-color: blueviolet transparent transparent transparent;
+	}
+	25% {
+	  border-color: blueviolet blueviolet transparent transparent;
+	}
+	50% {
+	  border-color: transparent blueviolet blueviolet transparent;
+	}
+	75% {
+	  border-color: transparent transparent blueviolet blueviolet;
+	}
+	100% {
+	  border-color: blueviolet transparent transparent transparent;
+	}
+  }
+  
+  main #portfolio .skills-card {
+	position: relative;
+	background: #000;
+	border-radius: 5px;
+	padding: 1.2rem;
+	margin: 10px 0;
+	overflow: hidden;
+	border: 3px solid transparent;
+	border-radius: 5px;
+	animation: glow-border 4s infinite linear;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Zoom effect on hover */
+  main #portfolio .skills-card:hover {
+	transform: scale(1.05); 
+  }
+
+/* Remove underline from links */
+.projects-container a {
+    text-decoration: none;
+    display: block; /* Ensure the link takes up the entire card */
+}
+
+/* Other styles remain the same */
+
+/* Projects container */
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Style for the project cards */
+.project-card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px; /* Create a 3D perspective for the tilt effect */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image inside the project card */
+.project-card img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Overlay for the project name */
+.project-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(55, 11, 58, 0.6); /* Dark transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+/* Hover effect to tilt the card backwards */
+.project-card:hover {
+    transform: rotateX(20deg) rotateY(10deg); /* Tilts the card backwards */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
+}
+
+/* Show the overlay with the project name on hover */
+.project-card:hover .overlay {
+    opacity: 1;
+}
+
 
 #section-template{
 width:50px;
@@ -288,7 +422,7 @@ margin :0 auto;
 main #contact .contact-area{
 flex-direction :row;
 padding:2em;
-background:url('https://ik.imagekit.io/candyjess/portfolio/slide_3.jpg?updatedAt=1713505937530');
+background:url('data:image/jpeg;base64,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');
 background-size:cover;
 background-position:center;
 }
@@ -303,7 +437,7 @@ display: block;
 color:#eee;
 }
 main #contact .contact-area #follow span{
-color:yellow;
+color:violet;
 }
 main #contact .contact-area form div{
 display: flex;

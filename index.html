@@ -6,7 +6,7 @@
 	<meta name="theme-color" content="#8A2BE2">
     <title>Candy Mzungu</title>
     <link rel="stylesheet" href="styles.css">
-<link rel="shortcut icon" href="img/images.jpeg">
+<link rel="shortcut icon" href="https://ik.imagekit.io/24rqula8cp/icons8-developer-female-96.png?updatedAt=1726742800572">
 </head>
 <body>
 <div id="splash">
@@ -20,21 +20,22 @@
 	<ul class="links">
 		<li data-section="home">Home</li>
 		<li data-section="about">About</li>
-		<li data-section="portfolio">Portfolio</li>
-		<li class="contact" data-section="contact" onclick="myBtn()">Contact</li>
+		<li data-section="portfolio">Skills</li>
+		<li data-section="Works">Projects</li>
+		<li data-section="contact">Contact</li>
 	</ul>
 	
    </header>
    <main>
 	<section id="home">
-		<h2>I'm Candy Mzungu</h2>
+		<h2 class="name">I'm Candy Mzungu</h2>
 		<p>A <span class='txt-type' data-words='["Software Developer.","Computer Science Student.",
 			     "UI/UX Designer.","Software Blogger."]' data-wait="3000"></span> <br/>Passionate about things of the web.</p>
 		<button id="portfolio-btn">Portfolio</button>
 	</section>
 	<section id="about">
 		<div>		
-			<img src="https://ik.imagekit.io/candyjess/portfolio/engineer_BuhPDyVW2p.webp" alt=""/>
+			<img src="https://ik.imagekit.io/24rqula8cp/icons8-developer-female-96.png?updatedAt=1726742800572" alt=""/>
 		</div>
 		<article>
 			<img src="https://ik.imagekit.io/candyjess/portfolio/info.png"/>
@@ -51,41 +52,67 @@ I've been learning and experimenting with various programming languages and fram
 	</section>
 	
 	<section id="portfolio">
-		<img id="section-template" src="https://ik.imagekit.io/candyjess/portfolio/portfolio.png"/>
-		<h2>Portfolio</h2>
+		<img id="section-template" src="https://ik.imagekit.io/candyjess/portfolio/portfolio.png" alt="Portfolio"/>
+		<h2>Skills</h2>
 		<div class="skillshare">
-			<p>I'm passionate about web designs and always strive to build amazing 
-				experiences.</p>
-		<div class="skills-card">
-			<img src="https://ik.imagekit.io/candyjess/portfolio/candidate.png" alt=""/>
-			<span>I have basic skills in</span>
-			<ul>
-				<li>HTML5 & CSS</li>
-				<li>JavaScript</li>
-				<li>React js</li>
-				<li>C#</li>
-				<li>Python3</li>
-			</ul>
-		</div>
-		<div class="skills-card">
-			<img src="https://ik.imagekit.io/candyjess/portfolio/tools.png" alt=""/>
-			<span>Tools I use</span>
-			<ul>
-				<li>Vs Code</li>
-				<li>Visual studio 2022</li>
-				<li>Git & Github</li>
-				<li>Node</li>
-				<li>Pyenv</li>
-			</ul>
-		</div>
-		<div>
-		</div>
+			<p>I'm passionate about web designs and always strive to build amazing experiences.</p>
+			<div class="skills-card">
+				<img src="https://ik.imagekit.io/candyjess/portfolio/candidate.png" alt="Candidate"/>
+				<span>I have basic skills in</span>
+				<ul>
+					<li>HTML5 & CSS</li>
+					<li>JavaScript</li>
+					<li>React js</li>
+					<li>C#</li>
+					<li>Python3</li>
+				</ul>
+			</div>
+			<div class="skills-card">
+				<img src="https://ik.imagekit.io/candyjess/portfolio/tools.png" alt="Tools"/>
+				<span>Tools I use</span>
+				<ul>
+					<li>Vs Code</li>
+					<li>Visual studio 2022</li>
+					<li>Git & Github</li>
+					<li>Node</li>
+					<li>Pyenv</li>
+				</ul>
+			</div>
 		</div>
 		<br>
-		<button><a style="text-decoration: none;color: rgb(34, 9, 175);" 
-			href="https://ik.imagekit.io/24rqula8cp/Candy%20Wawuda.pdf?updatedAt=1726734630226"
-			>Curriculum vitae</a></button>
+		<button class="cv"><a style="text-decoration: none;color: rgb(34, 9, 175);" href="https://ik.imagekit.io/24rqula8cp/Candy%20Wawuda.pdf?updatedAt=1726734630226">Curriculum vitae</a></button>
 	</section>
+	
+	<section id="Works">
+		<h2>My projects</h2>
+		<div class="projects-container">
+			<div class="project-card">
+				<a href="https://challenge3-ebon.vercel.app/" target="_blank"> <!-- Link to the project -->
+					<img src="https://ik.imagekit.io/24rqula8cp/Screenshot%202024-09-19%20at%2012.52.17.png?updatedAt=1726739600253" alt="Project 1">
+					<div class="overlay">
+						<span>FlatDango Movies</span>
+					</div>
+				</a>
+			</div>
+			<div class="project-card">
+				<a href="https://phase-2-code-challenge-2-mu.vercel.app/" target="_blank">
+					<img src="https://ik.imagekit.io/24rqula8cp/Screenshot%202024-09-19%20at%2013.08.20.png?updatedAt=1726740531838" alt="Project 2">
+					<div class="overlay">
+						<span>bot army collection</span>
+					</div>
+				</a>
+			</div>
+			<div class="project-card">
+				<a href="https://phase1-project-eight.vercel.app/" target="_blank">
+					<img src="https://ik.imagekit.io/24rqula8cp/Screenshot%202024-09-19%20at%2013.05.45.png?updatedAt=1726740374062" alt="Project 3">
+					<div class="overlay">
+						<span>Vehicle Catalogue</span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
+	
 	<section id="contact">
 		<img id="section-template" src="https://ik.imagekit.io/candyjess/portfolio/email.png"/>
 		<h2>Reach me</h2>
