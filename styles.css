@@ -437,6 +437,9 @@ background-position:center;
 main #contact .contact-area #follow{
 text-align:left;
 }
+main #contact .contact-area #follow img{
+	box-shadow: 5px 5px 5px white;
+}
 main #contact .contact-area div span{
 font-weight: bolder;
 }
