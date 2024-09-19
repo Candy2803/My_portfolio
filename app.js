@@ -55,5 +55,28 @@ function myBtn(){
 		
 }
 
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+	event.preventDefault(); 
 
+	const form = event.target;
+	const formData = new FormData(form);
+
+	fetch(form.action, {
+		method: form.method,
+		body: formData,
+		headers: {
+			'Accept': 'application/json'
+		}
+	})
+	.then(response => response.json())
+	.then(data => {
+		alert('Your message has been sent successfully!');
+		
+		window.location.reload();
+	})
+	.catch(error => {
+		console.error('Error:', error);
+		alert('There was a problem with your submission. Please try again.');
+	});
+});
 

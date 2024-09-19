@@ -104,15 +104,16 @@ I've been learning and experimenting with various programming languages and fram
 					GLdqHXzwRcwkrQWjpFsgFVjQNZGMRsRLZSNdQFhjbGtVwrBPHmscTRtCVjTNFLdJNvgcQd">
 					<img src="https://ik.imagekit.io/candyjess/portfolio/gmail.png"></a></p>
 			</div>
-			<form name ="contact">
+			<form id="contact-form" action="https://formspree.io/f/xeojbqyp" method="POST">
 				<div>
-					<input type="text" placeholder="Phone">
-						<p>or</p>
-					<input type="email" placeholder="Email">
+				  <input type="text" name="phone" placeholder="Phone" required>
+				  <p>or</p>
+				  <input type="email" name="email" placeholder="Email" required>
 				</div>
-				<input type="text" placeholder="Leave a message">
-				<input type="submit" value="send">
-			</form>
+				<input type="text" name="message" placeholder="Leave a message" required>
+				<input type="submit" value="Send">
+			  </form>
+			  
 		</div>
 		<div id="footer">
 			Copyright &copy Candy 2024
