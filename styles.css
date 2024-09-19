@@ -30,7 +30,7 @@ button,input{
 font-size: inherit;
 }
 h2{
-	color: violet;
+	color: blueviolet;
 }
 .name{
 	color: #fff;
@@ -51,7 +51,7 @@ header{
 	margin-top: 20px;
 }
 header h1:hover{
-	color: pink;
+	color: blueviolet;
 }
 header h1{
 	grid-column:1/-1;
@@ -79,7 +79,7 @@ header ul li{
 	transition: 0.5s;
 }
 header ul li:hover{
-	color: pink;
+	color: blueviolet;
 }
 header img{
 width:20px;
@@ -102,8 +102,7 @@ main #home::before {
     height: 110vh;
     width: 100%;
     
-    /* Gradient overlay to fade the image at the bottom */
-    background: linear-gradient(to bottom, rgba(36, 5, 36, 0) 50%, rgb(67, 4, 74) 100%);    
+    background: linear-gradient(to bottom, rgba(36, 5, 36, 0) 50%, blueviolet 100%);    
     background-size: cover;
     background-position: left;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 85%);
@@ -124,8 +123,8 @@ main #home h2{
 	line-height: 1.75;
 }
 main #home .txt{
-	border-right:1.5px solid purple;
-	color:violet;
+	border-right:1.5px solid blueviolet;
+	color:blueviolet;
 }
 main #home button{
 	margin-top: 2vmin;  
@@ -267,20 +266,16 @@ border-radius:2em;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  /* Zoom effect on hover */
   main #portfolio .skills-card:hover {
 	transform: scale(1.05); 
   }
 
-/* Remove underline from links */
 .projects-container a {
     text-decoration: none;
-    display: block; /* Ensure the link takes up the entire card */
+    display: block;
 }
 
-/* Other styles remain the same */
 
-/* Projects container */
 .projects-container {
     display: flex;
     justify-content: space-around;
@@ -289,19 +284,17 @@ border-radius:2em;
     padding: 20px;
 }
 
-/* Style for the project cards */
 .project-card {
     position: relative;
     width: 300px;
     height: 400px;
-    perspective: 1000px; /* Create a 3D perspective for the tilt effect */
+    perspective: 1000px; 
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 1.0s ease, box-shadow 0.5s ease;
 }
 
-/* Image inside the project card */
 .project-card img {
     width: 300px;
     height: 400px;
@@ -309,14 +302,13 @@ border-radius:2em;
     border-radius: 10px;
 }
 
-/* Overlay for the project name */
 .project-card .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(55, 11, 58, 0.6); /* Dark transparent overlay */
+    background: rgba(154, 13, 241, 0.6); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -328,13 +320,11 @@ border-radius:2em;
     border-radius: 10px;
 }
 
-/* Hover effect to tilt the card backwards */
 .project-card:hover {
-    transform: rotateX(20deg) rotateY(10deg); /* Tilts the card backwards */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
+    transform: rotateX(20deg) rotateY(10deg); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
-/* Show the overlay with the project name on hover */
 .project-card:hover .overlay {
     opacity: 1;
 }
