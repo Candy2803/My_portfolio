@@ -44,7 +44,7 @@ links.addEventListener('click',e=>{
 })
 let portfolio = document.getElementById("portfolio-btn")
 portfolio.addEventListener('click',()=>{
-	let elem=document.getElementById("portfolio")
+	let elem=document.getElementById("Works")
 	elem.scrollIntoView({behavior:"smooth"})
 })
 
