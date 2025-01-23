@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 *,*::before,*::after{
 	box-sizing: border-box;
 	margin: 0;
@@ -35,6 +38,7 @@ h2{
 .name{
 	color: #fff;
 }
+
 header{
 	height :65px;
 	padding: .2em 1.2rem;
@@ -51,7 +55,7 @@ header{
 	margin-top: 20px;
 }
 header h1:hover{
-	color: blueviolet;
+	color: blue;
 }
 header h1{
 	grid-column:1/-1;
@@ -321,7 +325,7 @@ border-radius:2em;
 }
 
 .project-card:hover {
-    transform: rotateX(20deg) rotateY(10deg); 
+    transform: rotateX(60deg) rotateZ(0deg); 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
